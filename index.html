@@ -11,6 +11,47 @@
     <!-- End: CSS Link for style.css -->
   </head>
   <body>
+
+    <!-- Main Section Start -->
+    <main class="index-main">
+      <div class="index-main__grid-container">
+        <!-- Form Section Start -->
+        <div>
+          <h1>Form</h1>
+          <p>Enter one of these following names for detailed information:</p>
+          <ul>
+            <li>Bulbasaur</li>
+            <li>Pikachu</li>
+            <li>Horsea</li>
+          </ul>
+          <!-- Form Start -->
+          <form>
+            <label for="pokemon_name">Pokémon:</label>
+            <input id="pokemon_name" name="pokemon_name" type="text" />
+            <button type="button">Submit</button>
+          </form>
+          <!-- End: Form -->
+        </div>
+        <!-- End: Form Section Start -->
+        <!-- Result Section Start -->
+        <div>
+          <h1>Result</h1>
+          <p>
+            Entered Pokémon name: <span id="name_key"></span>
+            <br />
+            Height (m): <span id="height"></span>
+            <br>
+            Type-1: <span id="type_1"></span>
+            <br>
+            Type-2: <span id="type_2"></span>
+          </p>
+        </div>
+        </div>
+        <!-- End: Result Section -->
+      </div>
+    </main>
+    <!-- End: Main Section -->
+
     <!-- JS Script for script.js Start -->
     <script src="./js/script.js"></script>
     <!-- End: JS Script for script.js -->
