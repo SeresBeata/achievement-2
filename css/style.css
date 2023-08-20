@@ -9,4 +9,30 @@
 }
 
 /* End: Universal Selector */
+/* Body Start */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #b3b4b6;
+  background: #2e3744;
+}
+body span {
+  font-weight: 500;
+  color: #e64c3c;
+}
+
+/* End: Body */
+/* Headings Start */
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  color: #e0e4e8;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+/* End: Headings */
+/********************** END: GENERAL SETTINGS **********************/
 /********************** SECTION SPECIFIC SETTINGS START **********************/

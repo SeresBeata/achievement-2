@@ -29,4 +29,33 @@ $font-weight-bolder: 600;
 }
 /* End: Universal Selector */
 
+/* Body Start */
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: 1.6;
+  color: $text-color-secondary;
+  background: $base-color-secondary-light;
+  span {
+    font-weight: $font-weight-bold;
+    color: $brand-color-primary;
+  }
+}
+/* End: Body */
+
+/* Headings Start */
+@mixin heading-base {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  color: $text-color-primary;
+}
+
+h1 {
+  @include heading-base;
+  font-size: $font-size-x-large;
+  font-weight: $font-weight-bolder;
+}
+/* End: Headings */
+
 /********************** END: GENERAL SETTINGS **********************/
