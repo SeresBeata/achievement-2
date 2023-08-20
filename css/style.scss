@@ -20,4 +20,13 @@ $font-weight-base: 400;
 $font-weight-bold: 500;
 $font-weight-bolder: 600;
 /* End: Color Palette and Typography */
+
+/* Universal Selector Start */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* End: Universal Selector */
+
 /********************** END: GENERAL SETTINGS **********************/
