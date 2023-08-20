@@ -50,8 +50,6 @@ let pokemonList = [
                 document.querySelector('#height').innerText = pokemonList[index].height + ' - It is a small Pokémon!';
             }
 
-        }else{
-            alert('Sorry, there is no such a Pokémon, try again!')
         }
     }
  });
