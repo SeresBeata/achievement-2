@@ -59,3 +59,34 @@ h1 {
 /* End: Headings */
 
 /********************** END: GENERAL SETTINGS **********************/
+
+/********************** SECTION SPECIFIC SETTINGS START **********************/
+/* Header Start */
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  background-color: $base-color-primary;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 120px;
+  .page-header__item {
+    flex: 0 1 100px;
+  }
+  img {
+    height: 100px;
+  }
+  .page-header__item:last-child {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+    @media all and (max-width: 480px) {
+      flex-grow: 0;
+    }
+  }
+  @media all and (max-width: 480px) {
+    justify-content: center;
+  }
+}
+/* End: Header */
+
