@@ -20,3 +20,7 @@ let pokemonList = [
 
 
 
+
+//Create event listener for form submit button
+ document.querySelector('button').addEventListener('click', () =>{
+ });
