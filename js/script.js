@@ -15,13 +15,17 @@ let pokemonList = [
         name: 'Horsea',
         height: 0.4,
         type: ['water', 'dragon']
+    },
+    {
+        name: 'Vaporeon',
+        height: 1.0,
+        type: ['water', '']
     }
 ];
 
 
 
-
-//Create event listener for form submit button
+ //Create event listener for form submit button
  document.querySelector('button').addEventListener('click', () =>{
 
     //Assign submitted Pokémon name as a value to `currentPokemonName` variable
