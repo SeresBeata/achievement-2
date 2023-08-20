@@ -1,0 +1,23 @@
+/********************** GENERAL SETTINGS START **********************/
+/* Color Palette and Typography Start */
+$brand-color-primary: #e64c3c;
+$brand-color-secondary: lighten($brand-color-primary, 10%);
+$base-color-primary: #15171c;
+$base-color-secondary: #232922;
+$base-color-secondary-light: #2e3744;
+$text-color-primary: #e0e4e8;
+$text-color-secondary: #b3b4b6;
+
+$font-family-heading: "Barlow Condensed", sans-serif;
+$font-family-base: "Montserrat", sans-serif;
+$font-size-base: 20px;
+$font-size-medium: 30px;
+$font-size-large: 40px;
+$font-size-x-large: 50px;
+$font-size-xx-large: 60px;
+$font-size-xxx-large: 70px;
+$font-weight-base: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+/* End: Color Palette and Typography */
+/********************** END: GENERAL SETTINGS **********************/
