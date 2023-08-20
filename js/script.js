@@ -23,4 +23,8 @@ let pokemonList = [
 
 //Create event listener for form submit button
  document.querySelector('button').addEventListener('click', () =>{
+
+    //Assign submitted Pokémon name as a value to `currentPokemonName` variable
+    let currentPokemonName = document.querySelector('#pokemon_name').value;
+
  });
