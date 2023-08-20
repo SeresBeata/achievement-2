@@ -8,7 +8,7 @@ let pokemonList = [
     },
     {
         name: 'Pikachu',
-        height: 0.4,
+        height: 0.5,
         type: ['field', 'fairy']
     },
     {
