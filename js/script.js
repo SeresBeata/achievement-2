@@ -52,4 +52,11 @@ let pokemonList = [
 
         }
     }
+
+    //Use findIndex() to check, if submitted Pokémon name is exist at `pokemonList` array
+    let isNotExist = pokemonList.findIndex(item => item.name === currentPokemonName)
+    //If submitted pokémon name does not exist, then create pop-up message with the submitted name
+    if (isNotExist === -1){
+       alert('Sorry, there is no such Pokémen, as ' + currentPokemonName + '.');
+    }
  });
