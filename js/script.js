@@ -58,5 +58,9 @@ let pokemonList = [
     //If submitted pokémon name does not exist, then create pop-up message with the submitted name
     if (isNotExist === -1){
        alert('Sorry, there is no such Pokémen, as ' + currentPokemonName + '.');
+       //Set the result section of index.html empty after pop-up message
+       document.querySelector('#name_key').innerText = '';
+       document.querySelector('#type').innerText = '';
+       document.querySelector('#height').innerText = '';
     }
  });
