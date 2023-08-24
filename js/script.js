@@ -23,7 +23,15 @@ let pokemonList = [
     }
 ];
 
+//Create a variable for datalist HTML element with id `#pokemon_list`
+let nameList = document.getElementById('pokemon_list');
 
+//Use forEach(); method to populate datalist HTML element with options from `pokemonList` array
+pokemonList.forEach(function(item){
+    let option = document.createElement('option');
+    option.value = item.name;
+    nameList.appendChild(option);
+ });
 
  //Create event listener for form submit button
  document.querySelector('button').addEventListener('click', () =>{
