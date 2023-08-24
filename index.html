@@ -66,7 +66,14 @@
               <!-- Form Start -->
               <form>
                 <label for="pokemon_name">Pokémon:</label>
-                <input id="pokemon_name" name="pokemon_name" type="text" />
+                <input
+                  id="pokemon_name"
+                  name="pokemon_name"
+                  list="pokemon_list"
+                  type="text"
+                  autocomplete="off"
+                />
+                <datalist id="pokemon_list"></datalist>
                 <button type="button">Submit</button>
               </form>
               <!-- End: Form -->
