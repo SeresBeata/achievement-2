@@ -63,6 +63,14 @@ let pokemonRepository = (function(){
     }
 
 })();
+//Find item in `pokmonList` array
+pokemonRepository.findOne('Pikachu');
+//Add new Object as item to `pokemonList` array
+pokemonRepository.add({name: 'Eevee', height: 1.00, type:['normal']});
+//Print all `pokemonList` array in console
+console.log(pokemonRepository.getAll());
+
+
 //Create `forEach();` function to iterate over the items in `pokemonList` array in order to print the details of each one
 pokemonRepository.getAll().forEach(function(pokemon){
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
