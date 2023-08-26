@@ -1,3 +1,5 @@
+//Create IIFE to avoid accidentally accessing the global state of `pokemonList` array
+let pokemonRepository = (function(){
     // Create `pokemonList` Array with 4 Pokémon objects through `let` keyword
     let pokemonList = [
         {
@@ -24,3 +26,4 @@
 
     }
 
+})();
