@@ -24,6 +24,10 @@ let pokemonRepository = (function(){
         }
     ];
 
+    //Create public function in order to add a single item to the `pokemonList` array through push() method
+    function add(pokemonItem){
+                pokemonList.push(pokemonItem);
+    }
     }
 
 })();
