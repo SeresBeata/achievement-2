@@ -54,6 +54,12 @@ let pokemonRepository = (function(){
            console.log(itemOfFindOne.name + ': height is ' + itemOfFindOne.height + ', type: ' + itemOfFindOne.type);
         })
     }
+
+    //Public functions assigned as keys of IIFE
+    return {
+        add : add,
+        getAll : getAll,
+        findOne : findOne
     }
 
 })();
