@@ -26,7 +26,19 @@ let pokemonRepository = (function(){
 
     //Create public function in order to add a single item to the `pokemonList` array through push() method
     function add(pokemonItem){
+        //Validate whether a type of the parameter is an object
+        if (typeof pokemonItem === "object"){
+            //console.log(Object.keys(pokemonItem)[0]);
+            //Validate whether all Object.keys() of the parameter are equal to the specific expected keys
+            if(Object.keys(pokemonItem)[0] === 'name' && Object.keys(pokemonItem)[1] === 'height' && Object.keys(pokemonItem)[2] === 'type'){
                 pokemonList.push(pokemonItem);
+            }else{
+                console.log('Incorrect key of object');
+            }
+        }else{
+            console.log('Incorrect type of data');
+        }
+    }
     }
     }
 
