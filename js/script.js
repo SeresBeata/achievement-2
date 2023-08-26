@@ -39,6 +39,12 @@ let pokemonRepository = (function(){
             console.log('Incorrect type of data');
         }
     }
+
+    //Create public function in order to return all items of `pokemonList` array
+    function getAll(){
+        return pokemonList;
+    }
+
     }
     }
 
