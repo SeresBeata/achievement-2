@@ -63,3 +63,7 @@ let pokemonRepository = (function(){
     }
 
 })();
+//Create `forEach();` function to iterate over the items in `pokemonList` array in order to print the details of each one
+pokemonRepository.getAll().forEach(function(pokemon){
+    console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
+});
