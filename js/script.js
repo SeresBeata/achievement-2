@@ -52,7 +52,7 @@ let pokemonRepository = (function(){
         //Iterate over the array of the filtered Pokémon
         resultFindOne.forEach(function(itemOfFindOne){
            console.log(itemOfFindOne.name + ': height is ' + itemOfFindOne.height + ', type: ' + itemOfFindOne.type);
-        })
+        });
     }
 
     //Public functions assigned as keys of IIFE
