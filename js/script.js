@@ -1,25 +1,26 @@
-// Create `pokemonList` Array with 3 Pokémon objects through `let` keyword
+    // Create `pokemonList` Array with 4 Pokémon objects through `let` keyword
+    let pokemonList = [
+        {
+            name: 'Bulbasaur',
+            height: 2.04,
+            type: ['grass', 'poisen']
+        },
+        {
+            name: 'Pikachu',
+            height: 1.04,
+            type: ['electric']
+        },
+        {
+            name: 'Horsea',
+            height: 1.04,
+            type: ['water']
+        },
+        {
+            name: 'Vaporeon',
+            height: 3.03,
+            type: ['water']
+        }
+    ];
 
-let pokemonList = [
-    {
-        name: 'Bulbasaur',
-        height: 0.7,
-        type: ['monster', 'grass']
-    },
-    {
-        name: 'Pikachu',
-        height: 0.5,
-        type: ['field', 'fairy']
-    },
-    {
-        name: 'Horsea',
-        height: 0.4,
-        type: ['water', 'dragon']
-    },
-    {
-        name: 'Vaporeon',
-        height: 1.0,
-        type: ['water', '']
     }
-];
 
