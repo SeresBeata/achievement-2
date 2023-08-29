@@ -91,6 +91,7 @@ h1 {
   background-color: #15171c;
   padding: 20px;
   border-radius: 5px;
+  text-align: center;
 }
 .page-main__grid-container > div button {
   background-color: #e64c3c;
