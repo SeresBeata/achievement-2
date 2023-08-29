@@ -81,5 +81,9 @@ pokemonRepository.getAll().forEach(function(pokemon){
     //Create a variable for <ul> element
     let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
 
+    //Create <li> and btn elements 
+    let uListItem = document.createElement('li'); 
+    let listBtn = document.createElement('button');
+
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
 });
