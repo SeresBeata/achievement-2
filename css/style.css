@@ -96,19 +96,24 @@ h1 {
 .page-main__grid-container > div .page-main__pokemon-list {
   list-style-type: none;
 }
+.page-main__grid-container > div .pokemon-list__item {
   background-color: #e64c3c;
   color: #15171c;
   font-weight: 500;
   border: solid #e64c3c 2px;
-  padding: 0 5px;
+  padding: 5px 0;
+  margin: 5px 0;
   border-radius: 5px;
   transition-duration: 0.2s;
+  width: 100%;
 }
-.page-main__grid-container > div button:hover {
+.page-main__grid-container > div .pokemon-list__item:hover {
+  background-color: #b3b4b6;
+  border-color: #b3b4b6;
+}
+.page-main__grid-container > div .pokemon-list__item:active {
   background-color: #ec7569;
   border-color: #ec7569;
-}
-.page-main__grid-container > div button:active {
   scale: 0.9;
 }
 @media all and (max-width: 768px) {

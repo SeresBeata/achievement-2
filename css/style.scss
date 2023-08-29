@@ -116,18 +116,23 @@ h1 {
     .page-main__pokemon-list {
       list-style-type: none;
     }
+    .pokemon-list__item {
       background-color: $brand-color-primary;
       color: $base-color-primary;
       font-weight: $font-weight-bold;
       border: solid $brand-color-primary 2px;
-      padding: 0 5px;
+      padding: 5px 0;
+      margin: 5px 0;
       border-radius: 5px;
       transition-duration: 0.2s;
+      width: 100%;
       &:hover {
-        background-color: $brand-color-secondary;
-        border-color: $brand-color-secondary;
+        background-color: $text-color-secondary;
+        border-color: $text-color-secondary;
       }
       &:active {
+        background-color: $brand-color-secondary;
+        border-color: $brand-color-secondary;
         scale: 0.9;
       }
     }
