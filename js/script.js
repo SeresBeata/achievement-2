@@ -85,5 +85,9 @@ pokemonRepository.getAll().forEach(function(pokemon){
     let uListItem = document.createElement('li'); 
     let listBtn = document.createElement('button');
 
+    //Set the content of btn element and add a class
+    listBtn.innerText = pokemon.name;
+    listBtn.classList.add('pokemon-list__item');
+
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
 });
