@@ -112,8 +112,10 @@ h1 {
     background-color: $base-color-primary;
     padding: 20px;
     border-radius: 5px;
-    button {
     text-align: center;
+    .page-main__pokemon-list {
+      list-style-type: none;
+    }
       background-color: $brand-color-primary;
       color: $base-color-primary;
       font-weight: $font-weight-bold;

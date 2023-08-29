@@ -93,7 +93,9 @@ h1 {
   border-radius: 5px;
   text-align: center;
 }
-.page-main__grid-container > div button {
+.page-main__grid-container > div .page-main__pokemon-list {
+  list-style-type: none;
+}
   background-color: #e64c3c;
   color: #15171c;
   font-weight: 500;
