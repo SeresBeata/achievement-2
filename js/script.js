@@ -89,5 +89,9 @@ pokemonRepository.getAll().forEach(function(pokemon){
     listBtn.innerText = pokemon.name;
     listBtn.classList.add('pokemon-list__item');
 
+    //Append btn to <li> and <li> to <ul>
+    uListItem.appendChild(listBtn);
+    uListOfPokemons.appendChild(uListItem);
+    
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
 });
