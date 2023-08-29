@@ -28,12 +28,18 @@ let pokemonRepository = (function(){
     function add(pokemonItem){
         //Validate whether a type of the parameter is an object
         if (typeof pokemonItem === "object"){
-            //console.log(Object.keys(pokemonItem)[0]);
-            //Validate whether all Object.keys() of the parameter are equal to the specific expected keys
-            if(Object.keys(pokemonItem)[0] === 'name' && Object.keys(pokemonItem)[1] === 'height' && Object.keys(pokemonItem)[2] === 'type'){
+            const expectedKeys = ['name', 'height', 'type'];
+            let checkKey = true;
+            // Validate whether all expected keys are present in the object using forEach loop
+            expectedKeys.forEach(expectedKey => {
+                if(!Object.keys(pokemonItem).includes(expectedKey)){
+                    checkKey = false;
+                    console.log('Incorrect key of object');
+                    return;
+                }
+            });
+            if(checkKey){
                 pokemonList.push(pokemonItem);
-            }else{
-                console.log('Incorrect key of object');
             }
         }else{
             console.log('Incorrect type of data');
