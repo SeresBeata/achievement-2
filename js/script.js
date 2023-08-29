@@ -76,8 +76,10 @@ pokemonRepository.add({name: 'Eevee', height: 1.00, type:['normal']});
 //Print all `pokemonList` array in console
 console.log(pokemonRepository.getAll());
 
-
-//Create `forEach();` function to iterate over the items in `pokemonList` array in order to print the details of each one
+//Create `forEach();` function to iterate over the items in `pokemonList` array in order to display the details of each one as a <li> on index.html 
 pokemonRepository.getAll().forEach(function(pokemon){
+    //Create a variable for <ul> element
+    let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
+
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
 });
