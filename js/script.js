@@ -61,11 +61,16 @@ let pokemonRepository = (function(){
         });
     }
 
+    //Create public function, where the parameter represent a single Pokémon
+    function addListItem(pokemon){
+    }
+
     //Public functions assigned as keys of IIFE
     return {
         add : add,
         getAll : getAll,
-        findOne : findOne
+        findOne : findOne,
+        addListItem : addListItem
     }
 
 })();
