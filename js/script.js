@@ -63,6 +63,20 @@ let pokemonRepository = (function(){
 
     //Create public function, where the parameter represent a single Pokémon
     function addListItem(pokemon){
+        //Create a variable for <ul> element
+        let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
+
+        //Create <li> and btn elements 
+        let uListItem = document.createElement('li'); 
+        let listBtn = document.createElement('button');
+
+        //Set the content of btn element and add a class
+        listBtn.innerText = pokemon.name;
+        listBtn.classList.add('pokemon-list__item');
+
+        //Append btn to <li> and <li> to <ul>
+        uListItem.appendChild(listBtn);
+        uListOfPokemons.appendChild(uListItem);
     }
 
     //Public functions assigned as keys of IIFE
@@ -83,20 +97,6 @@ console.log(pokemonRepository.getAll());
 
 //Create `forEach();` function to iterate over the items in `pokemonList` array in order to display the details of each one as a <li> on index.html 
 pokemonRepository.getAll().forEach(function(pokemon){
-    //Create a variable for <ul> element
-    let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
-
-    //Create <li> and btn elements 
-    let uListItem = document.createElement('li'); 
-    let listBtn = document.createElement('button');
-
-    //Set the content of btn element and add a class
-    listBtn.innerText = pokemon.name;
-    listBtn.classList.add('pokemon-list__item');
-
-    //Append btn to <li> and <li> to <ul>
-    uListItem.appendChild(listBtn);
-    uListOfPokemons.appendChild(uListItem);
     
     console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
 });
