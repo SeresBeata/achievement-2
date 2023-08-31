@@ -79,6 +79,11 @@ let pokemonRepository = (function(){
         uListOfPokemons.appendChild(uListItem);
     }
 
+    //Create function to print details of single Pokémon item on console
+    function showDetails(pokemon){
+        console.log(pokemon)
+    }
+
     //Public functions assigned as keys of IIFE
     return {
         add : add,
