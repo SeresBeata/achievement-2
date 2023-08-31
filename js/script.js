@@ -77,6 +77,11 @@ let pokemonRepository = (function(){
         //Append btn to <li> and <li> to <ul>
         uListItem.appendChild(listBtn);
         uListOfPokemons.appendChild(uListItem);
+
+        //Add eventListener() to buttons
+        listBtn.addEventListener('click', function(event){
+            showDetails(pokemon);
+        });
     }
 
     //Create function to print details of single Pokémon item on console
