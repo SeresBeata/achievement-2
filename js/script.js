@@ -78,15 +78,20 @@ let pokemonRepository = (function(){
         uListItem.appendChild(listBtn);
         uListOfPokemons.appendChild(uListItem);
 
-        //Add eventListener() to buttons
-        listBtn.addEventListener('click', function(event){
-            showDetails(pokemon);
-        });
+        //Call btnListener() function
+        btnListener(listBtn, pokemon);
     }
 
     //Create function to print details of single Pokémon item on console
     function showDetails(pokemon){
         console.log(pokemon)
+    }
+
+    //Create function to add eventListener() to buttons
+    function btnListener(buttons, pokemon){
+        buttons.addEventListener('click', function(event){
+            showDetails(pokemon);
+        });
     }
 
     //Public functions assigned as keys of IIFE
