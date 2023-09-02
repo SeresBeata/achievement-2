@@ -75,6 +75,26 @@ let pokemonRepository = (function(){
         });
     }
 
+    //Create public function to fetch data -list of Pokémon- from the API
+    function loadList() {
+        return fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (json) {
+                json.results.forEach(function (item) {
+                    let pokemon = {
+                        name: item.name,
+                        detailsUrl: item.url,
+                    };
+                    add(pokemon);
+                });
+            })
+            .catch(function (e) {
+                console.error(e);
+            });
+    }
+
     //Public functions assigned as keys of IIFE
     return {
         add : add,
