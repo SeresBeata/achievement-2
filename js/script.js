@@ -2,6 +2,8 @@
 let pokemonRepository = (function(){
     // Create an empty array, called `pokemonList`
     let pokemonList = [];
+    //Create variable for PokeAPI endpoint 
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
     //Create public function in order to add a single item to the `pokemonList` array through push() method
     function add(pokemonItem){
