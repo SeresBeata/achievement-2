@@ -65,7 +65,9 @@ let pokemonRepository = (function(){
 
     //Create function to print details of single Pokémon item on console
     function showDetails(pokemon){
-        console.log(pokemon)
+        loadDetails(pokemon).then(function () {
+            console.log(pokemon);
+        });
     }
 
     //Create function to add eventListener() to buttons
