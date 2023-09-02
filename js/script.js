@@ -120,6 +120,7 @@ let pokemonRepository = (function(){
         findOne : findOne,
         addListItem : addListItem,
         loadList : loadList,
+        loadDetails : loadDetails
     }
 
 })();
