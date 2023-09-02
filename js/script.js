@@ -117,8 +117,10 @@ let pokemonRepository = (function(){
 
 })();
 
-//Create `forEach();` function to iterate over the items in `pokemonList` array in order to display the details of each one as a <li> on index.html 
-pokemonRepository.getAll().forEach(function(pokemon){
-    pokemonRepository.addListItem(pokemon);
-    console.log(pokemon.name + ': ' + pokemon.height + ' ' + pokemon.type)
+//Create `forEach` to iterate over the fetched Pokémon items from the API and display them
+pokemonRepository.loadList().then(function () {
+    // Now the data is loaded!
+    pokemonRepository.getAll().forEach(function (pokemon) {
+        pokemonRepository.addListItem(pokemon);
+    });
 });
