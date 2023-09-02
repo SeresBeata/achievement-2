@@ -100,7 +100,8 @@ let pokemonRepository = (function(){
         add : add,
         getAll : getAll,
         findOne : findOne,
-        addListItem : addListItem
+        addListItem : addListItem,
+        loadList : loadList,
     }
 
 })();
