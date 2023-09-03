@@ -105,6 +105,13 @@ let pokemonRepository = (function(){
             });
     }
 
+    //Create function to display a loading message while data is being loaded
+    function showLoadingMessage(){
+        console.log('Data is loading');
+        let loadMessage = document.querySelector('.page-main__load-message');
+        loadMessage.innerText = 'Data is loading ⏳';
+    }
+
     //Public functions assigned as keys of IIFE
     return {
         add : add,
