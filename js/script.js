@@ -69,6 +69,7 @@ let pokemonRepository = (function(){
 
     //Create public function to fetch data -list of Pokémon- from the API
     function loadList() {
+        showLoadingMessage();
         return fetch(apiUrl)
             .then(function (response) {
                 return response.json();
@@ -89,6 +90,7 @@ let pokemonRepository = (function(){
 
     //Create public function to fetch the details of a single Pokemon from the API
     function loadDetails(item) {
+        showLoadingMessage();
         let url = item.detailsUrl;
         return fetch(url)
             .then(function (response) {
