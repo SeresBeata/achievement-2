@@ -114,6 +114,14 @@ let pokemonRepository = (function(){
         loadMessage.innerText = 'Data is loading ⏳';
     }
 
+    //Create function to remove the loading message, if data has been loaded
+    function hideLoadingMessage(){
+        console.log('Data is loaded. Here comes the result');
+        let loadMessage = document.querySelector('.page-main__load-message');
+
+        setTimeout(function(){loadMessage.innerText = '';}, 500);
+    }
+
     //Public functions assigned as keys of IIFE
     return {
         add : add,
