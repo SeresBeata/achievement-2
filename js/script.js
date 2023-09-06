@@ -74,6 +74,16 @@ let pokemonRepository = (function(){
             if(pokemon.types.length > 1){
                 console.log(pokemon.types[1].type.name);
             }
+        
+            //Create modal for Pokémon-------------------------------------------------------------
+            //Create variable for the <div> with the id of 'moddal-container'
+            let modalContainer = document.querySelector('#modal-container');
+
+            // Clear all existing modal content
+            modalContainer.innerHTML = '';
+
+            //Add 'is-visible' class to the '#modal-container' <div> element
+            modalContainer.classList.add('is-visible');
         });
     }
 
