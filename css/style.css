@@ -77,6 +77,68 @@ h1 {
   align-items: center;
 }
 
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* to show it above other content */
+  z-index: 999;
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+#modal-container.is-visible .modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #b3b4b6;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 5px;
+}
+#modal-container.is-visible .modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #15171c;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 5px;
+}
+#modal-container.is-visible .modal-close:hover {
+  background-color: #e64c3c;
+  color: #e0e4e8;
+}
+#modal-container.is-visible .modal h1 {
+  margin-top: 0;
+  margin-left: 25px;
+  text-transform: uppercase;
+  color: #15171c;
+}
+#modal-container.is-visible .modal h3 {
+  margin-bottom: 0;
+  color: #15171c;
+  font-weight: 600;
+}
+#modal-container.is-visible .modal p {
+  margin-bottom: 0;
+  color: #15171c;
+}
+
 .page-main__grid-container {
   max-width: 80%;
   display: grid;
