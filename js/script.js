@@ -91,6 +91,8 @@ let pokemonRepository = (function(){
             let closeButtonElement = document.createElement('button');
             closeButtonElement.classList.add('modal-close');
             closeButtonElement.innerText = 'X';
+            //Use event listener to call hideModal() function in case of click event on close btn
+            closeButtonElement.addEventListener('click', hideModal);
 
             //Add heading
             let titleElement = document.createElement('h1');
