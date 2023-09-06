@@ -133,6 +133,13 @@ let pokemonRepository = (function(){
         });
     }
 
+    //Create function to close the modal later on
+    function hideModal() {
+        let modalContainer = document.querySelector('#modal-container');
+        //Remove 'is-visible' class from the '#modal-container' <div> element
+        modalContainer.classList.remove('is-visible');
+    }
+
     //Create function to add eventListener() to buttons
     function btnListener(buttons, pokemon){
         buttons.addEventListener('click', function(event){
