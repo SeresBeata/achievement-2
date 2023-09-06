@@ -132,6 +132,16 @@ let pokemonRepository = (function(){
 
             //Add 'is-visible' class to the '#modal-container' <div> element
             modalContainer.classList.add('is-visible');
+
+            //for the user to be able to remove the modal when the user clicks outside of the modal
+            modalContainer.addEventListener('click', (e) => {
+            // Since this is also triggered when clicking INSIDE the modal
+            // We only want to close if the user clicks directly on the overlay
+            let target = e.target;
+            if (target === modalContainer) {
+                hideModal();
+            }
+            });
         });
     }
 
