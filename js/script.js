@@ -116,6 +116,18 @@ let pokemonRepository = (function(){
             //Add img
             let contentElementImg = document.createElement('img');;
             contentElementImg.src = pokemon.imageUrl;
+
+            //Append created elements to the created 'div' with the 'modal' class 
+            modal.appendChild(closeButtonElement);
+            modal.appendChild(titleElement);
+            modal.appendChild(contentElementHeight);
+            modal.appendChild(contentElementType0);
+            modal.appendChild(contentElementType1);
+            modal.appendChild(contentElementType2);
+            modal.appendChild(contentElementImg);
+            //Append the created 'div' with the 'modal' class to the '#modal-container' <div> element
+            modalContainer.appendChild(modal);
+
             //Add 'is-visible' class to the '#modal-container' <div> element
             modalContainer.classList.add('is-visible');
         });
