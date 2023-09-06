@@ -100,6 +100,7 @@ h1 {
   background-color: #e64c3c;
   color: #15171c;
   font-weight: 500;
+  text-transform: uppercase;
   border: solid #e64c3c 2px;
   padding: 5px 0;
   margin: 5px 0;
