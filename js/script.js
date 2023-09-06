@@ -152,6 +152,14 @@ let pokemonRepository = (function(){
         modalContainer.classList.remove('is-visible');
     }
 
+    //Use event listener to close the modal in case of 'escape' press
+    window.addEventListener('keydown', (e) => {
+    let modalContainer = document.querySelector('#modal-container');
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    });
+
     //Create function to add eventListener() to buttons
     function btnListener(buttons, pokemon){
         buttons.addEventListener('click', function(event){
