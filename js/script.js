@@ -82,6 +82,40 @@ let pokemonRepository = (function(){
             // Clear all existing modal content
             modalContainer.innerHTML = '';
 
+            //Create 'div' element and add the .modal class to it
+            let modal = document.createElement('div');
+            modal.classList.add('modal');
+
+            // Add the new modal content
+            //Add close btn
+            let closeButtonElement = document.createElement('button');
+            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.innerText = 'X';
+
+            //Add heading
+            let titleElement = document.createElement('h1');
+            titleElement.innerText = pokemon.name;
+
+            //Add paragraph
+            let contentElementHeight = document.createElement('h3');
+            contentElementHeight.innerText = 'Height: ' + pokemon.height;
+
+            let contentElementType0 = document.createElement('h3');
+            contentElementType0.innerText = 'Type:'
+
+            let contentElementType1 = document.createElement('p');
+            contentElementType1.innerText = pokemon.types[0].type.name;
+
+            let contentElementType2 = document.createElement('p');
+            if(pokemon.types.length > 1){
+                contentElementType2.innerText = pokemon.types[1].type.name;
+            }else{
+                contentElementType2.innerText = '';
+            }
+
+            //Add img
+            let contentElementImg = document.createElement('img');;
+            contentElementImg.src = pokemon.imageUrl;
             //Add 'is-visible' class to the '#modal-container' <div> element
             modalContainer.classList.add('is-visible');
         });
