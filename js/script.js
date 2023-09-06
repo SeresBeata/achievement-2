@@ -124,8 +124,6 @@ let pokemonRepository = (function(){
     //Create function to display a loading message while data is being loaded
     function showLoadingMessage(){
         console.log('Data is loading');
-        let loadMessage = document.querySelector('.page-main__load-message');
-        loadMessage.innerText = 'Data is loading ⏳';
     }
 
     //Create function to remove the loading message, if data has been loaded
