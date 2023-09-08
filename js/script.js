@@ -47,15 +47,20 @@ let pokemonRepository = (function(){
         //Create a variable for <ul> element
         let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
 
-        //Create <li> and btn elements 
+        //Create <li>, btn and <img> elements 
         let uListItem = document.createElement('li'); 
         let listBtn = document.createElement('button');
+        let imgPreview = document.createElement('img');
 
         //Set the content of btn element and add a class
         listBtn.innerText = pokemon.name;
         listBtn.classList.add('pokemon-list__item');
 
-        //Append btn to <li> and <li> to <ul>
+        //Set the content of the <img> element
+        imgPreview.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
+
+        //Append img to btn, btn to <li> and <li> to <ul>
+        listBtn.appendChild(imgPreview);
         uListItem.appendChild(listBtn);
         uListOfPokemons.appendChild(uListItem);
 
