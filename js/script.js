@@ -105,7 +105,10 @@ let pokemonRepository = (function(){
 
             //Add paragraph
             let contentElementHeight = document.createElement('h3');
-            contentElementHeight.innerText = 'Height: ' + pokemon.height;
+            contentElementHeight.innerText = 'Height: ';
+
+            let contentHeightValue = document.createElement('span');
+            contentHeightValue.innerText = `${pokemon.height / 10} m`;
 
             let contentElementType0 = document.createElement('h3');
             contentElementType0.innerText = 'Type:'
@@ -128,6 +131,7 @@ let pokemonRepository = (function(){
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
             modal.appendChild(contentElementHeight);
+            modal.appendChild(contentHeightValue);
             modal.appendChild(contentElementType0);
             modal.appendChild(contentElementType1);
             modal.appendChild(contentElementType2);
