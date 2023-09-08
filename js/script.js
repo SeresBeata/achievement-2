@@ -211,7 +211,8 @@ let pokemonRepository = (function(){
             })
             .then(function (details) {
                 // Now we add the details to the item
-                item.imageUrl = details.sprites.front_default;
+                item.imageUrl = details.sprites.other["official-artwork"].front_default;
+                item.imageUrlBack = details.sprites.other["official-artwork"].front_shiny;
                 item.height = details.height;
                 item.types = details.types;
             })
