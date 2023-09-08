@@ -103,7 +103,6 @@ let pokemonRepository = (function(){
             let titleElement = document.createElement('h1');
             titleElement.innerText = pokemon.name;
 
-            //Add paragraph
             let contentElementHeight = document.createElement('h3');
             contentElementHeight.innerText = 'Height: ';
 
@@ -111,8 +110,9 @@ let pokemonRepository = (function(){
             contentHeightValue.innerText = `${pokemon.height / 10} m`;
 
             let contentElementType0 = document.createElement('h3');
-            contentElementType0.innerText = 'Type:'
+            contentElementType0.innerText = 'Type:';
 
+            //Add paragraph
             let contentElementType1 = document.createElement('p');
             contentElementType1.innerText = pokemon.types[0].type.name;
 
