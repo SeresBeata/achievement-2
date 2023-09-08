@@ -176,8 +176,9 @@ let pokemonRepository = (function(){
                 return response.json();
             })
             .then(function (json) {
-                json.results.forEach(function (item) {
+                json.results.forEach(function (item, index) {
                     let pokemon = {
+                        id: index + 1,
                         name: item.name,
                         detailsUrl: item.url,
                     };
