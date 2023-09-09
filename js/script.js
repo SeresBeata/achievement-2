@@ -177,7 +177,18 @@ let pokemonRepository = (function(){
                 hideModal();
             }
             });
+
+            //Call the flipCard() function to "flip" the card inside of model
+            flipCard();
         });
+    }
+
+    //Create function to "flip" card inside of the modal
+    function flipCard(){
+        let frontCard = document.querySelector('.card');
+        frontCard.addEventListener( 'click', function() {
+            frontCard.classList.toggle('is-flipped');
+          });
     }
 
     //Create function to close the modal later on
