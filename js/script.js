@@ -130,6 +130,22 @@ let pokemonRepository = (function(){
             let contentElementImg2 = document.createElement('img');
             contentElementImg2.src = pokemon.imageUrlBack;
 
+            //Create <div> elements for flip card animation
+            let contentElementCard1 = document.createElement('div');
+            contentElementCard1.classList.add('scene');
+            contentElementCard1.classList.add('scene--card');
+
+            let contentElementCard2 = document.createElement('div');
+            contentElementCard2.classList.add('card');
+
+            let contentElementCard3 = document.createElement('div');
+            contentElementCard3.classList.add('card__face');
+            contentElementCard3.classList.add('card__face--front');
+
+            let contentElementCard4 = document.createElement('div');
+            contentElementCard4.classList.add('card__face');
+            contentElementCard4.classList.add('card__face--back');
+
             //Append created elements to the created 'div' with the 'modal' class 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
