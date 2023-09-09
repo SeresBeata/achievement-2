@@ -124,8 +124,11 @@ let pokemonRepository = (function(){
             }
 
             //Add img
-            let contentElementImg = document.createElement('img');;
+            let contentElementImg = document.createElement('img');
             contentElementImg.src = pokemon.imageUrl;
+
+            let contentElementImg2 = document.createElement('img');
+            contentElementImg2.src = pokemon.imageUrlBack;
 
             //Append created elements to the created 'div' with the 'modal' class 
             modal.appendChild(closeButtonElement);
