@@ -138,6 +138,13 @@ h1 {
   margin-bottom: 0;
   color: #15171c;
 }
+#modal-container.is-visible .modal img {
+  margin-top: 20px;
+  height: 200px;
+}
+#modal-container.is-visible span {
+  color: #ff0040;
+}
 
 .page-main__grid-container {
   max-width: 80%;

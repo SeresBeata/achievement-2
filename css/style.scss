@@ -168,6 +168,15 @@ h1 {
     margin-bottom: 0;
     color: $base-color-primary;
   }
+
+  .modal img {
+    margin-top: 20px;
+    height: 200px;
+  }
+
+  span {
+    color: $animation-color-front;
+  }
 }
 
 .page-main__grid-container {
