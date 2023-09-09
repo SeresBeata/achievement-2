@@ -146,6 +146,13 @@ let pokemonRepository = (function(){
             contentElementCard4.classList.add('card__face');
             contentElementCard4.classList.add('card__face--back');
 
+            //Append the <img> and <div> elements for flip animation
+            contentElementCard3.appendChild(contentElementImg);
+            contentElementCard4.appendChild(contentElementImg2);
+            contentElementCard2.appendChild(contentElementCard3);
+            contentElementCard2.appendChild(contentElementCard4);
+            contentElementCard1.appendChild(contentElementCard2);
+
             //Append created elements to the created 'div' with the 'modal' class 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
@@ -154,7 +161,7 @@ let pokemonRepository = (function(){
             modal.appendChild(contentElementType0);
             modal.appendChild(contentElementType1);
             modal.appendChild(contentElementType2);
-            modal.appendChild(contentElementImg);
+            modal.appendChild(contentElementCard1);
             //Append the created 'div' with the 'modal' class to the '#modal-container' <div> element
             modalContainer.appendChild(modal);
 
