@@ -192,6 +192,15 @@ h1 {
     .page-main__pokemon-list {
       list-style-type: none;
       padding-left: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px;
+      @media all and (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media all and (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
     }
     .pokemon-list__item {
       background-color: $brand-color-primary;

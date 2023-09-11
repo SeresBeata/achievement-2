@@ -161,6 +161,19 @@ h1 {
 .page-main__grid-container .page-main__submit .page-main__pokemon-list {
   list-style-type: none;
   padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+@media all and (max-width: 1200px) {
+  .page-main__grid-container .page-main__submit .page-main__pokemon-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 800px) {
+  .page-main__grid-container .page-main__submit .page-main__pokemon-list {
+    grid-template-columns: 1fr;
+  }
 }
 .page-main__grid-container .page-main__submit .pokemon-list__item {
   background-color: #e64c3c;
