@@ -148,6 +148,7 @@ h1 {
 
 .page-main__grid-container {
   margin: 20px auto;
+  width: 80%;
 }
 .page-main__grid-container h1 {
   margin: 0;
@@ -157,6 +158,7 @@ h1 {
   padding: 40px;
   border-radius: 5px;
   text-align: center;
+  width: 100%;
 }
 .page-main__grid-container .page-main__submit .page-main__pokemon-list {
   list-style-type: none;
