@@ -156,6 +156,7 @@ h1 {
 .page-main__grid-container .page-main__submit {
   background-color: #15171c;
   padding: 40px;
+  padding-bottom: 25px;
   border-radius: 5px;
   text-align: center;
   width: 100%;
@@ -203,6 +204,10 @@ h1 {
 }
   }
 }
+@media all and (max-width: 480px) {
+  .page-main__grid-container .page-main__submit {
+    padding: 10px;
+    padding-bottom: 1px;
   }
 }
 
