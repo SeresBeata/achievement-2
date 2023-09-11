@@ -82,19 +82,19 @@ let pokemonRepository = (function(){
         
             //Create modal for Pokémon-------------------------------------------------------------
             //Create variable for the <div> with the id of 'moddal-container'
-            let modalContainer = document.querySelector('#modal-container');
+            let modalContainer = document.querySelector('#my-modal-container');
 
             // Clear all existing modal content
             modalContainer.innerHTML = '';
 
             //Create 'div' element and add the .modal class to it
             let modal = document.createElement('div');
-            modal.classList.add('modal');
+            modal.classList.add('my-modal');
 
             // Add the new modal content
             //Add close btn
             let closeButtonElement = document.createElement('button');
-            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.classList.add('my-modal-close');
             closeButtonElement.innerText = 'X';
             //Use event listener to call hideModal() function in case of click event on close btn
             closeButtonElement.addEventListener('click', hideModal);
@@ -193,14 +193,14 @@ let pokemonRepository = (function(){
 
     //Create function to close the modal later on
     function hideModal() {
-        let modalContainer = document.querySelector('#modal-container');
+        let modalContainer = document.querySelector('#my-modal-container');
         //Remove 'is-visible' class from the '#modal-container' <div> element
         modalContainer.classList.remove('is-visible');
     }
 
     //Use event listener to close the modal in case of 'escape' press
     window.addEventListener('keydown', (e) => {
-    let modalContainer = document.querySelector('#modal-container');
+    let modalContainer = document.querySelector('#my-modal-container');
         if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
             hideModal();
         }
