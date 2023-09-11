@@ -152,17 +152,17 @@ h1 {
 .page-main__grid-container h1 {
   margin: 0;
 }
-.page-main__grid-container > div {
+.page-main__grid-container .page-main__submit {
   background-color: #15171c;
   padding: 40px;
   border-radius: 5px;
   text-align: center;
 }
-.page-main__grid-container > div .page-main__pokemon-list {
+.page-main__grid-container .page-main__submit .page-main__pokemon-list {
   list-style-type: none;
   padding-left: 0;
 }
-.page-main__grid-container > div .pokemon-list__item {
+.page-main__grid-container .page-main__submit .pokemon-list__item {
   background-color: #e64c3c;
   color: #15171c;
   font-weight: 500;
@@ -177,18 +177,15 @@ h1 {
   align-items: center;
   justify-content: space-between;
 }
-.page-main__grid-container > div .pokemon-list__item:hover {
+.page-main__grid-container .page-main__submit .pokemon-list__item:hover {
   background-color: #b3b4b6;
   border-color: #b3b4b6;
 }
-.page-main__grid-container > div .pokemon-list__item:active {
+.page-main__grid-container .page-main__submit .pokemon-list__item:active {
   background-color: #ec7569;
   border-color: #ec7569;
   scale: 0.9;
 }
-@media all and (max-width: 480px) {
-  .page-main__grid-container > div {
-    padding: 10px;
   }
 }
   }
