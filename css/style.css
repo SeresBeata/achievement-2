@@ -202,6 +202,9 @@ h1 {
   border-color: #ec7569;
   scale: 0.9;
 }
+@media all and (max-width: 360px) {
+  .page-main__grid-container .page-main__submit .pokemon-list__item {
+    width: 98%;
   }
 }
 @media all and (max-width: 480px) {

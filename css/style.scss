@@ -228,6 +228,9 @@ h1 {
         border-color: $brand-color-secondary;
         scale: 0.9;
       }
+      @media all and (max-width: 360px) {
+        width: 98%;
+      }
     }
     @media all and (max-width: 480px) {
       padding: 10px;
