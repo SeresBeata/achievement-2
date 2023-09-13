@@ -66,6 +66,12 @@ let pokemonRepository = (function(){
 
         //Call btnListener() function
         btnListener(listBtn, pokemon);
+
+        //Create <option>, set its value to the name of Pokémon, and append to datalist for combo box to search for Pokémon
+        let nameList = document.getElementById('datalistOptions');
+        let option = document.createElement('option');
+        option.value = pokemon.name;
+        nameList.appendChild(option);
     }
 
     //Create function to print details of single Pokémon item on console
