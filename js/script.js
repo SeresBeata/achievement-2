@@ -77,6 +77,30 @@ let pokemonRepository = (function(){
         listBtn.setAttribute('id', pokemon.id);
     }
 
+    //Create a function to either scroll to the selected Pokémon or alert the user about invalid Pokémon input
+    function searchOne(pokemonName){
+        let resultFindOne = '';
+        resultFindOne = pokemonList.filter((pokemonItem) => pokemonItem.name === pokemonName);
+        // console.log(resultFindOne); //Output: an array within an object of the filetered Pokémon
+        //Iterate over the array of the filtered Pokémon
+        resultFindOne.forEach(function(itemOfFindOne){
+            // console.log(itemOfFindOne.name + ': height is ' + itemOfFindOne.height + ', type: ' + itemOfFindOne.type + ', index:' + itemOfFindOne.id);
+
+            //Use the "result" <a> tag to scroll to the selected Pokémon
+            let result = document.getElementById('result');
+            result.href = `#${itemOfFindOne.id}`;
+            result.classList.remove('hidden_result');
+            result.addEventListener('click', function(){
+                result.classList.add('hidden_result');
+            });
+        });
+        // console.log(resultFindOne);
+        // console.log(resultFindOne.length);
+        if(resultFindOne.length === 0){
+            alert('Sorry, we have no such a Pokémon! Try again!');
+        }
+    }
+
     }
 
     //Create function to print details of single Pokémon item on console
