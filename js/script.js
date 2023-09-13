@@ -101,6 +101,19 @@ let pokemonRepository = (function(){
         }
     }
 
+    //Create public function to search for different Pokémon at the search bar
+    function clickSearch(){
+        let searchBtn = document.getElementById('searchBtn');
+        searchBtn.addEventListener("click", function(){
+            //Let's empty the href of the result <a> first
+            let result = document.getElementById('result');
+            result.href = '';
+            //Get the value of the input
+            let searchInput = document.getElementById('exampleDataList');
+            // console.log(searchInput.value)
+            //Call the searchOne() function and use the vaule of the input as argument
+            searchOne(searchInput.value);
+        })
     }
 
     //Create function to print details of single Pokémon item on console
@@ -311,7 +324,8 @@ let pokemonRepository = (function(){
         findOne : findOne,
         addListItem : addListItem,
         loadList : loadList,
-        loadDetails : loadDetails
+        loadDetails : loadDetails,
+        clickSearch : clickSearch
     }
 
 })();
