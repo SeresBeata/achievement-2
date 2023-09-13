@@ -336,4 +336,7 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
+
+    //Use search bar to search for specific Pokémon
+    pokemonRepository.clickSearch();
 });
