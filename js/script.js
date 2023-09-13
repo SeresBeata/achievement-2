@@ -72,6 +72,11 @@ let pokemonRepository = (function(){
         let option = document.createElement('option');
         option.value = pokemon.name;
         nameList.appendChild(option);
+
+        //Set the id attribute of the Pokémon buttons to match the index of Pokémon
+        listBtn.setAttribute('id', pokemon.id);
+    }
+
     }
 
     //Create function to print details of single Pokémon item on console
