@@ -92,6 +92,33 @@ h1 {
 }
 /* End: Header */
 
+/* Carousel Start */
+#carouselExampleAutoplaying {
+  width: 60%;
+  margin: 100px auto;
+  padding: 10px;
+  border-radius: 5px;
+  .carousel-inner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    .carousel-item__img {
+      height: 300px;
+      margin: 0 auto;
+      @media all and (max-width: 360px) {
+        height: 250px;
+      }
+    }
+  }
+  @media all and (max-width: 1200px) {
+    width: 70%;
+  }
+  @media all and (max-width: 765px) {
+    width: 100%;
+  }
+}
+/* End: Carousel */
+
 /* Main Section Start */
 .page-main {
   min-height: calc(100vh - 195px);
