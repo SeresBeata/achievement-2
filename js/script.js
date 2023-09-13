@@ -112,7 +112,7 @@ let pokemonRepository = (function(){
             let searchInput = document.getElementById('exampleDataList');
             // console.log(searchInput.value)
             //Call the searchOne() function and use the vaule of the input as argument
-            searchOne(searchInput.value);
+            searchOne(searchInput.value.toLowerCase());
         })
     }
 
