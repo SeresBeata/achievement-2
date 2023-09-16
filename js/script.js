@@ -109,14 +109,14 @@ let pokemonRepository = (function(){
     //Create function to print details of single Pokémon item on console
     function showDetails(pokemon){
         loadDetails(pokemon).then(function () {
-            //Test through print data on the console
-            console.log(pokemon);
-            console.log(pokemon.imageUrl);
-            console.log(pokemon.name + ' ' + pokemon.height + ' ' + pokemon.types[0].type.name);
+            //Test through print data on the console----------------------------------------------
+            // console.log(pokemon);
+            // console.log(pokemon.imageUrl);
+            // console.log(pokemon.name + ' ' + pokemon.height + ' ' + pokemon.types[0].type.name);
 
-            if(pokemon.types.length > 1){
-                console.log(pokemon.types[1].type.name);
-            }
+            // if(pokemon.types.length > 1){
+            //     console.log(pokemon.types[1].type.name);
+            // }
         
             //Create modal for Pokémon-------------------------------------------------------------
             //Create variable for the <div> with the id of 'moddal-container'
