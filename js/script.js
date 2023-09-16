@@ -253,10 +253,10 @@ let pokemonRepository = (function(){
 
     //Create public function to fetch data -list of Pokémon- from the API
     function loadList() {
-        showLoadingMessage();
+        // showLoadingMessage();
         return fetch(apiUrl)
             .then(function (response) {
-                hideLoadingMessage();
+                // hideLoadingMessage();
                 return response.json();
             })
             .then(function (json) {
@@ -270,18 +270,18 @@ let pokemonRepository = (function(){
                 });
             })
             .catch(function (e) {
-                hideLoadingMessage();
+                // hideLoadingMessage();
                 console.error(e);
             });
     }
 
     //Create public function to fetch the details of a single Pokemon from the API
     function loadDetails(item) {
-        showLoadingMessage();
+        // showLoadingMessage();
         let url = item.detailsUrl;
         return fetch(url)
             .then(function (response) {
-                hideLoadingMessage();
+                // hideLoadingMessage();
                 return response.json();
             })
             .then(function (details) {
@@ -292,20 +292,20 @@ let pokemonRepository = (function(){
                 item.types = details.types;
             })
             .catch(function (e) {
-                hideLoadingMessage();
+                // hideLoadingMessage();
                 console.error(e);
             });
     }
 
     //Create function to display a loading message while data is being loaded
-    function showLoadingMessage(){
-        console.log('Data is loading');
-    }
+    // function showLoadingMessage(){
+    //     console.log('Data is loading');
+    // }
 
     //Create function to remove the loading message, if data has been loaded
-    function hideLoadingMessage(){
-        console.log('Data is loaded. Here comes the result');
-    }
+    // function hideLoadingMessage(){
+    //     console.log('Data is loaded. Here comes the result');
+    // }
 
     //Public functions assigned as keys of IIFE
     return {
