@@ -1,1 +1,6 @@
 .prettierignore
+.eslintignore
+
+package.json
+package-lock.json
+node_modules
