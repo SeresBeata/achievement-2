@@ -32,16 +32,6 @@ let pokemonRepository = (function(){
         return pokemonList;
     }
 
-    //Create public function in order to find specific Pokémon only by name through filter() method
-    function findOne(pokemonName){
-        let resultFindOne = pokemonList.filter((pokemonItem) => pokemonItem.name === pokemonName);
-        console.log(resultFindOne); //Output: an array within an object of the filetered Pokémon
-        //Iterate over the array of the filtered Pokémon
-        resultFindOne.forEach(function(itemOfFindOne){
-           console.log(itemOfFindOne.name + ': height is ' + itemOfFindOne.height + ', type: ' + itemOfFindOne.type);
-        });
-    }
-
     //Create public function, where the parameter represent a single Pokémon
     function addListItem(pokemon){
         //Create a variable for <ul> element
@@ -321,7 +311,6 @@ let pokemonRepository = (function(){
     return {
         add : add,
         getAll : getAll,
-        findOne : findOne,
         addListItem : addListItem,
         loadList : loadList,
         loadDetails : loadDetails,
