@@ -191,6 +191,10 @@ let pokemonRepository = (function(){
             contentElementCard2.appendChild(contentElementCard4);
             contentElementCard1.appendChild(contentElementCard2);
 
+            //Create <p> for img
+            let clickMessage = document.createElement('p');
+            clickMessage.innerText = 'Click on the image!'
+
             //Append created elements to the created 'div' with the 'modal' class 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
@@ -200,6 +204,7 @@ let pokemonRepository = (function(){
             modal.appendChild(contentElementType1);
             modal.appendChild(contentElementType2);
             modal.appendChild(contentElementCard1);
+            modal.appendChild(clickMessage);
             //Append the created 'div' with the 'modal' class to the '#modal-container' <div> element
             modalContainer.appendChild(modal);
 
