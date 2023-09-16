@@ -1,44 +1,46 @@
 //Create IIFE to avoid accidentally accessing the global state of `pokemonList` array
-let pokemonRepository = (function(){
+let pokemonRepository = (function () {
     // Create an empty array, called `pokemonList`
     let pokemonList = [];
-    //Create variable for PokeAPI endpoint 
+    //Create variable for PokeAPI endpoint
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
     //Create public function in order to add a single item to the `pokemonList` array through push() method
-    function add(pokemonItem){
+    function add(pokemonItem) {
         //Validate whether a type of the parameter is an object
-        if (typeof pokemonItem === "object"){
+        if (typeof pokemonItem === 'object') {
             const expectedKeys = ['name', 'detailsUrl'];
             let checkKey = true;
             // Validate whether all expected keys are present in the object using forEach loop
-            expectedKeys.forEach(expectedKey => {
-                if(!Object.keys(pokemonItem).includes(expectedKey)){
+            expectedKeys.forEach((expectedKey) => {
+                if (!Object.keys(pokemonItem).includes(expectedKey)) {
                     checkKey = false;
                     console.log('Incorrect key of object');
                     return;
                 }
             });
-            if(checkKey){
+            if (checkKey) {
                 pokemonList.push(pokemonItem);
             }
-        }else{
+        } else {
             console.log('Incorrect type of data');
         }
     }
 
     //Create public function in order to return all items of `pokemonList` array
-    function getAll(){
+    function getAll() {
         return pokemonList;
     }
 
     //Create public function, where the parameter represent a single Pokémon
-    function addListItem(pokemon){
+    function addListItem(pokemon) {
         //Create a variable for <ul> element
-        let uListOfPokemons = document.querySelector('.page-main__pokemon-list');
+        let uListOfPokemons = document.querySelector(
+            '.page-main__pokemon-list'
+        );
 
-        //Create <li>, btn and <img> elements 
-        let uListItem = document.createElement('li'); 
+        //Create <li>, btn and <img> elements
+        let uListItem = document.createElement('li');
         let listBtn = document.createElement('button');
         let imgPreview = document.createElement('img');
 
@@ -68,33 +70,35 @@ let pokemonRepository = (function(){
     }
 
     //Create a function to either scroll to the selected Pokémon or alert the user about invalid Pokémon input
-    function searchOne(pokemonName){
+    function searchOne(pokemonName) {
         let resultFindOne = '';
-        resultFindOne = pokemonList.filter((pokemonItem) => pokemonItem.name === pokemonName);
+        resultFindOne = pokemonList.filter(
+            (pokemonItem) => pokemonItem.name === pokemonName
+        );
         // console.log(resultFindOne); //Output: an array within an object of the filetered Pokémon
         //Iterate over the array of the filtered Pokémon
-        resultFindOne.forEach(function(itemOfFindOne){
+        resultFindOne.forEach(function (itemOfFindOne) {
             // console.log(itemOfFindOne.name + ': height is ' + itemOfFindOne.height + ', type: ' + itemOfFindOne.type + ', index:' + itemOfFindOne.id);
 
             //Use the "result" <a> tag to scroll to the selected Pokémon
             let result = document.getElementById('result');
             result.href = `#${itemOfFindOne.id}`;
             result.classList.remove('hidden_result');
-            result.addEventListener('click', function(){
+            result.addEventListener('click', function () {
                 result.classList.add('hidden_result');
             });
         });
         // console.log(resultFindOne);
         // console.log(resultFindOne.length);
-        if(resultFindOne.length === 0){
+        if (resultFindOne.length === 0) {
             alert('Sorry, we have no such a Pokémon! Try again!');
         }
     }
 
     //Create public function to search for different Pokémon at the search bar
-    function clickSearch(){
+    function clickSearch() {
         let searchBtn = document.getElementById('searchBtn');
-        searchBtn.addEventListener("click", function(){
+        searchBtn.addEventListener('click', function () {
             //Let's empty the href of the result <a> first
             let result = document.getElementById('result');
             result.href = '';
@@ -103,11 +107,11 @@ let pokemonRepository = (function(){
             // console.log(searchInput.value)
             //Call the searchOne() function and use the vaule of the input as argument
             searchOne(searchInput.value.toLowerCase());
-        })
+        });
     }
 
     //Create function to print details of single Pokémon item on console
-    function showDetails(pokemon){
+    function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
             //Test through print data on the console----------------------------------------------
             // console.log(pokemon);
@@ -117,7 +121,7 @@ let pokemonRepository = (function(){
             // if(pokemon.types.length > 1){
             //     console.log(pokemon.types[1].type.name);
             // }
-        
+
             //Create modal for Pokémon-------------------------------------------------------------
             //Create variable for the <div> with the id of 'moddal-container'
             let modalContainer = document.querySelector('#my-modal-container');
@@ -155,9 +159,9 @@ let pokemonRepository = (function(){
             contentElementType1.innerText = pokemon.types[0].type.name;
 
             let contentElementType2 = document.createElement('p');
-            if(pokemon.types.length > 1){
+            if (pokemon.types.length > 1) {
                 contentElementType2.innerText = pokemon.types[1].type.name;
-            }else{
+            } else {
                 contentElementType2.innerText = '';
             }
 
@@ -193,9 +197,9 @@ let pokemonRepository = (function(){
 
             //Create <p> for img
             let clickMessage = document.createElement('p');
-            clickMessage.innerText = 'Click on the image!'
+            clickMessage.innerText = 'Click on the image!';
 
-            //Append created elements to the created 'div' with the 'modal' class 
+            //Append created elements to the created 'div' with the 'modal' class
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
             modal.appendChild(contentElementHeight);
@@ -213,12 +217,12 @@ let pokemonRepository = (function(){
 
             //for the user to be able to remove the modal when the user clicks outside of the modal
             modalContainer.addEventListener('click', (e) => {
-            // Since this is also triggered when clicking INSIDE the modal
-            // We only want to close if the user clicks directly on the overlay
-            let target = e.target;
-            if (target === modalContainer) {
-                hideModal();
-            }
+                // Since this is also triggered when clicking INSIDE the modal
+                // We only want to close if the user clicks directly on the overlay
+                let target = e.target;
+                if (target === modalContainer) {
+                    hideModal();
+                }
             });
 
             //Call the flipCard() function to "flip" the card inside of model
@@ -227,11 +231,11 @@ let pokemonRepository = (function(){
     }
 
     //Create function to "flip" card inside of the modal
-    function flipCard(){
+    function flipCard() {
         let frontCard = document.querySelector('.card');
-        frontCard.addEventListener( 'click', function() {
+        frontCard.addEventListener('click', function () {
             frontCard.classList.toggle('is-flipped');
-          });
+        });
     }
 
     //Create function to close the modal later on
@@ -243,15 +247,18 @@ let pokemonRepository = (function(){
 
     //Use event listener to close the modal in case of 'escape' press
     window.addEventListener('keydown', (e) => {
-    let modalContainer = document.querySelector('#my-modal-container');
-        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+        let modalContainer = document.querySelector('#my-modal-container');
+        if (
+            e.key === 'Escape' &&
+            modalContainer.classList.contains('is-visible')
+        ) {
             hideModal();
         }
     });
 
     //Create function to add eventListener() to buttons
-    function btnListener(buttons, pokemon){
-        buttons.addEventListener('click', function(event){
+    function btnListener(buttons, pokemon) {
+        buttons.addEventListener('click', function (event) {
             showDetails(pokemon);
         });
     }
@@ -291,8 +298,10 @@ let pokemonRepository = (function(){
             })
             .then(function (details) {
                 // Now we add the details to the item
-                item.imageUrl = details.sprites.other["official-artwork"].front_default;
-                item.imageUrlBack = details.sprites.other["official-artwork"].front_shiny;
+                item.imageUrl =
+                    details.sprites.other['official-artwork'].front_default;
+                item.imageUrlBack =
+                    details.sprites.other['official-artwork'].front_shiny;
                 item.height = details.height;
                 item.types = details.types;
             })
@@ -314,14 +323,13 @@ let pokemonRepository = (function(){
 
     //Public functions assigned as keys of IIFE
     return {
-        add : add,
-        getAll : getAll,
-        addListItem : addListItem,
-        loadList : loadList,
-        loadDetails : loadDetails,
-        clickSearch : clickSearch
-    }
-
+        add: add,
+        getAll: getAll,
+        addListItem: addListItem,
+        loadList: loadList,
+        loadDetails: loadDetails,
+        clickSearch: clickSearch,
+    };
 })();
 
 //Create `forEach` to iterate over the fetched Pokémon items from the API and display them
