@@ -258,7 +258,7 @@ let pokemonRepository = (function () {
 
     //Create function to add eventListener() to buttons
     function btnListener(buttons, pokemon) {
-        buttons.addEventListener('click', function (event) {
+        buttons.addEventListener('click', function () {
             showDetails(pokemon);
         });
     }
