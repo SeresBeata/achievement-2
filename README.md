@@ -21,7 +21,6 @@ Many thanks go to **Amit Mondal** for his card flip animation, which has been im
 ### Screenshots to represent the project
 
 ![screenshot of the pokédex app](./img/seresbeata.github.io_achievement-2_1200.png)
-![screenshot of the pokédex app](./img/seresbeata.github.io_achievement-2_360.png)
 ![screenshot of the pokédex app](./img/seresbeata.github.io_achievement-2_vaporeon.png)
 
 ### Overview
